@@ -1,11 +1,11 @@
 @extends('template.template')
 
 @section('title')
-Nasabah Tanya/Jawab
+Kontak Alamat
 @endsection
 
 @section('nav')
-@include('nasabahtanyajawab.nav')
+@include('kontak.nav')
 @endsection
 
 @section('content')

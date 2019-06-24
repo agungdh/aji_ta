@@ -1,1 +1,1 @@
-<li><a href="{{ base_url() }}"><i class="fa fa-home"></i> Nasabah Tanya/Jawab</a></li>
+<li><a href="{{ base_url() }}syaratasuransi"><i class="fa fa-home"></i> Syarat Asuransi</a></li>
