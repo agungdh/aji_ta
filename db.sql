@@ -3,7 +3,7 @@
 -- Host: localhost	Database: aji_ta
 -- ------------------------------------------------------
 -- Server version 	5.5.5-10.1.38-MariaDB
--- Date: Thu, 20 Jun 2019 06:02:06 +0200
+-- Date: Mon, 24 Jun 2019 06:10:38 +0200
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,8 +25,9 @@
 CREATE TABLE `agen` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(191) NOT NULL,
+  `no_hp` varchar(191) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,11 +37,41 @@ CREATE TABLE `agen` (
 LOCK TABLES `agen` WRITE;
 /*!40000 ALTER TABLE `agen` DISABLE KEYS */;
 SET autocommit=0;
+INSERT INTO `agen` VALUES (3,'Aji 1','081234566778'),(4,'Aji 2','082412412412');
 /*!40000 ALTER TABLE `agen` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
 
--- Dumped table `agen` with 0 row(s)
+-- Dumped table `agen` with 2 row(s)
+--
+
+--
+-- Table structure for table `berita`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `berita` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` date NOT NULL,
+  `judul` varchar(191) NOT NULL,
+  `isi` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `berita`
+--
+
+LOCK TABLES `berita` WRITE;
+/*!40000 ALTER TABLE `berita` DISABLE KEYS */;
+SET autocommit=0;
+/*!40000 ALTER TABLE `berita` ENABLE KEYS */;
+UNLOCK TABLES;
+COMMIT;
+
+-- Dumped table `berita` with 0 row(s)
 --
 
 --
@@ -55,7 +86,7 @@ CREATE TABLE `produk` (
   `deskripsi` text NOT NULL,
   `jenis` enum('i','k') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -82,4 +113,4 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on: Thu, 20 Jun 2019 06:02:06 +0200
+-- Dump completed on: Mon, 24 Jun 2019 06:10:38 +0200
