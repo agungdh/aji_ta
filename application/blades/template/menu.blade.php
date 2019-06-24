@@ -35,6 +35,12 @@
 </li>
 
 <li>
+  <a href="{{ base_url() }}agenadmin">
+    <i class="fa fa-address-book"></i> <span>Data Agen</span>
+  </a>
+</li>
+
+<li>
   <a href="{{ base_url() }}syaratasuransi">
     <i class="fa fa-address-book"></i> <span>Syarat Asuransi</span>
   </a>
