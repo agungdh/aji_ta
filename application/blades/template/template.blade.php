@@ -107,8 +107,7 @@ if(ci()->session->login) {
           <li class="dropdown user user-menu">
             @if(ci()->session->login)
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{base_url()}}assets/favicon/favicon.png" class="user-image" alt="User Image">
-              <span class="hidden-xs">{{$userData->karyawan->nama}}</span>
+              <span class="hidden-xs">{{$userData->nama}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -116,8 +115,8 @@ if(ci()->session->login) {
                 <img src="{{base_url()}}assets/favicon/favicon.png" class="img-circle" alt="User Image">
 
                 <p>
-                    {{$userData->karyawan->nama}}
-                    <small>{{$userData->karyawan->nik}}</small>
+                    {{$userData->nama}}
+                    <small>{{$userData->username}}</small>
                 </p>
               </li>
               <!-- Menu Footer-->

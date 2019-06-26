@@ -47,7 +47,7 @@ if (!function_exists('validator')) {
 if (!function_exists('getUserData')) {
     function getUserData()
     {
-        return User::with('karyawan')->find(ci()->session->userID);
+        return User::find(ci()->session->userID);
     }
  }
 

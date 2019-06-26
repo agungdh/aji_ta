@@ -3,7 +3,7 @@
 -- Host: localhost	Database: aji_ta
 -- ------------------------------------------------------
 -- Server version 	5.5.5-10.1.38-MariaDB
--- Date: Wed, 26 Jun 2019 08:05:18 +0200
+-- Date: Wed, 26 Jun 2019 08:36:42 +0200
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -150,7 +150,7 @@ CREATE TABLE `user` (
   `level` enum('u','a') NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -160,11 +160,12 @@ CREATE TABLE `user` (
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 SET autocommit=0;
+INSERT INTO `user` VALUES (1,'Administrator','admin','$2y$12$0uBugMReeBm0Q0K.v8N6nea.DOin3/TMSV2Qds8NIp1KB6XGnBCrG','a');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
 
--- Dumped table `user` with 0 row(s)
+-- Dumped table `user` with 1 row(s)
 --
 
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -176,4 +177,4 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on: Wed, 26 Jun 2019 08:05:18 +0200
+-- Dump completed on: Wed, 26 Jun 2019 08:36:42 +0200
