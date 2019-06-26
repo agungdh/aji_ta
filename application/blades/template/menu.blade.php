@@ -29,6 +29,12 @@
 </li>
 
 <li>
+  <a href="{{ base_url() }}beritaadmin">
+    <i class="fa fa-address-book"></i> <span>Berita/Informasi Terbaru</span>
+  </a>
+</li>
+
+<li>
   <a href="{{ base_url() }}agen">
     <i class="fa fa-address-book"></i> <span>Data Agen</span>
   </a>

@@ -3,7 +3,7 @@
 -- Host: localhost	Database: aji_ta
 -- ------------------------------------------------------
 -- Server version 	5.5.5-10.1.38-MariaDB
--- Date: Mon, 24 Jun 2019 06:10:38 +0200
+-- Date: Wed, 26 Jun 2019 06:00:15 +0200
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -55,9 +55,9 @@ CREATE TABLE `berita` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `tanggal` date NOT NULL,
   `judul` varchar(191) NOT NULL,
-  `isi` text NOT NULL,
+  `berita` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,11 +67,12 @@ CREATE TABLE `berita` (
 LOCK TABLES `berita` WRITE;
 /*!40000 ALTER TABLE `berita` DISABLE KEYS */;
 SET autocommit=0;
+INSERT INTO `berita` VALUES (4,'2019-06-27','11 33','22 44'),(5,'2019-06-03','Test 123','Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. ');
 /*!40000 ALTER TABLE `berita` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
 
--- Dumped table `berita` with 0 row(s)
+-- Dumped table `berita` with 2 row(s)
 --
 
 --
@@ -86,7 +87,7 @@ CREATE TABLE `produk` (
   `deskripsi` text NOT NULL,
   `jenis` enum('i','k') NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -113,4 +114,4 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on: Mon, 24 Jun 2019 06:10:38 +0200
+-- Dump completed on: Wed, 26 Jun 2019 06:00:15 +0200
