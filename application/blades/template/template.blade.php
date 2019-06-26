@@ -131,7 +131,7 @@ if(ci()->session->login) {
               </li>
             </ul>
             @else
-            <a href="javascript:void(0)">Login</a>
+            <a href="javascript:void(0)" onclick="openModal()">Login</a>
             @endif
           </li>
         </ul>
@@ -185,6 +185,58 @@ if(ci()->session->login) {
   </footer>
 </div>
 <!-- ./wrapper -->
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" role="dialog">
+  <div class="modal-dialog modal-xs">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <form action="{{base_url()}}log/in" method="post">
+          @php
+          if (ci()->session->flashdata('errors') && ci()->session->flashdata('errors')->has('username')) {
+            $class = 'form-group has-feedback has-error';
+            $message = ci()->session->flashdata('errors')->first('username');
+          } else {
+            $class = 'form-group has-feedback';
+            $message = '';
+          }
+          @endphp
+          <div class="{{$class}}">
+            <div data-toggle="tooltip" title="{{$message}}">
+              <input name="username" type="text" class="form-control" placeholder="Username" value="{{ci()->session->flashdata('old') ? ci()->session->flashdata('old')['username'] : ''}}">
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+          </div>
+
+          @php
+          if (ci()->session->flashdata('errors') && ci()->session->flashdata('errors')->has('password')) {
+            $class = 'form-group has-feedback has-error';
+            $message = ci()->session->flashdata('errors')->first('password');
+          } else {
+            $class = 'form-group has-feedback';
+            $message = '';
+          }
+          @endphp
+          <div class="{{$class}}">
+            <div data-toggle="tooltip" title="{{$message}}">
+              <input name="password" type="password" class="form-control" placeholder="Password">
+              <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- jQuery 3 -->
 <script src="{{base_url()}}assets/AdminLTE/bower_components/jquery/dist/jquery.min.js"></script>
@@ -277,5 +329,16 @@ function getDatePickerValue(id) {
     swal('{{ ci()->session->flashdata('alert')['title'] }}', '{{ ci()->session->flashdata('alert')['message'] }}', '{{ ci()->session->flashdata('alert')['class'] }}');
 </script>
 @endif
+
+<script type="text/javascript">
+  function openModal() {
+    $("#loginModal").modal();
+  }
+
+  @if(ci()->session->flashdata('old'))
+  openModal();
+  @endif
+</script>
+
 </body>
 </html>
