@@ -46,6 +46,7 @@ class Agenadmin extends CI_Controller {
 			redirect(base_url('agenadmin/tambah'));
 		}
 
+		$requestData['id_user'] = $this->session->userID;
 		Agen_model::insert($requestData);
 		
 		$this->session->set_flashdata(
@@ -89,6 +90,7 @@ class Agenadmin extends CI_Controller {
 			redirect(base_url('agenadmin/ubah/' . $id));
 		}
 
+		$requestData['id_user'] = $this->session->userID;
 		Agen_model::where('id', $id)->update($requestData);
 		
 		$this->session->set_flashdata(
