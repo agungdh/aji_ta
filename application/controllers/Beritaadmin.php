@@ -44,7 +44,8 @@ class Beritaadmin extends CI_Controller {
 			
 			redirect(base_url('beritaadmin/tambah'));
 		}
-
+		
+		$requestData['id_user'] = $this->session->userID;
 		Berita_model::insert($requestData);
 		
 		$this->session->set_flashdata(
@@ -88,6 +89,7 @@ class Beritaadmin extends CI_Controller {
 			redirect(base_url('beritaadmin/ubah/' . $id));
 		}
 
+		$requestData['id_user'] = $this->session->userID;
 		Berita_model::where('id', $id)->update($requestData);
 		
 		$this->session->set_flashdata(

@@ -27,6 +27,7 @@ class Log extends CI_Controller {
 		if (count($validator->errors()) > 0) {
 			$this->session->set_flashdata('errors', $validator->errors());
 			$this->session->set_flashdata('old', $requestData);
+			$this->session->set_flashdata('loginError', true);
 		} else {
 			$this->session->set_userdata([
 				'userID' => $user->id,

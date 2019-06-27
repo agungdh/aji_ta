@@ -334,7 +334,7 @@ function getDatePickerValue(id) {
     $("#loginModal").modal();
   }
 
-  @if(ci()->session->flashdata('old'))
+  @if(ci()->session->flashdata('loginError'))
   openModal();
   @endif
 </script>

@@ -3,7 +3,7 @@
 -- Host: localhost	Database: aji_ta
 -- ------------------------------------------------------
 -- Server version 	5.5.5-10.1.38-MariaDB
--- Date: Wed, 26 Jun 2019 08:36:42 +0200
+-- Date: Thu, 27 Jun 2019 06:46:34 +0200
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -24,9 +24,12 @@
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `agen` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
   `nama` varchar(191) NOT NULL,
   `no_hp` varchar(191) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `id_user` (`id_user`),
+  CONSTRAINT `agen_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -37,12 +40,11 @@ CREATE TABLE `agen` (
 LOCK TABLES `agen` WRITE;
 /*!40000 ALTER TABLE `agen` DISABLE KEYS */;
 SET autocommit=0;
-INSERT INTO `agen` VALUES (3,'Aji 1','081234566778'),(4,'Aji 2','082412412412');
 /*!40000 ALTER TABLE `agen` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
 
--- Dumped table `agen` with 2 row(s)
+-- Dumped table `agen` with 0 row(s)
 --
 
 --
@@ -53,10 +55,13 @@ COMMIT;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `berita` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
   `tanggal` date NOT NULL,
   `judul` varchar(191) NOT NULL,
   `berita` text NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `id_user` (`id_user`),
+  CONSTRAINT `berita_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -67,12 +72,11 @@ CREATE TABLE `berita` (
 LOCK TABLES `berita` WRITE;
 /*!40000 ALTER TABLE `berita` DISABLE KEYS */;
 SET autocommit=0;
-INSERT INTO `berita` VALUES (4,'2019-06-27','11 33','22 44'),(5,'2019-06-03','Test 123','Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. Ini test aja. ');
 /*!40000 ALTER TABLE `berita` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
 
--- Dumped table `berita` with 2 row(s)
+-- Dumped table `berita` with 0 row(s)
 --
 
 --
@@ -83,11 +87,14 @@ COMMIT;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `produk` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_user` int(11) NOT NULL,
   `produk` varchar(191) NOT NULL,
   `deskripsi` text NOT NULL,
   `jenis` enum('i','k') NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`),
+  KEY `id_user` (`id_user`),
+  CONSTRAINT `produk_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -97,7 +104,7 @@ CREATE TABLE `produk` (
 LOCK TABLES `produk` WRITE;
 /*!40000 ALTER TABLE `produk` DISABLE KEYS */;
 SET autocommit=0;
-INSERT INTO `produk` VALUES (1,'Eka waktu Ideal (rupiah)','Asuransi yang dirancang untuk membantu keluarga indonesia mempersiapkan dana tabungan hari tua sekaligus untuk mempersiapkan perlindungan ekonomi bagi ahli waris jika anda sebagai tertanggung meninggal dunia.','i'),(2,'Mitra Abadi','Program asuransi yang dirancang untuk memberikan perlindungan seumur hidup bagi anda.','i'),(3,'Mitra Beasiswa','Asuransi ini dirancang untuk memberikan perlindungan dan pembiayaan pendidikan buah hati anda dibangku Taman kanak-kanak hingga perguruan tinggi, baik orang tua hidup atau meninggal.','i'),(4,'Mitra Cerdas','Merupakan program asuransi pendidikan yang dikaitkan dengan program investasi, sehingga dana yang disiapkan untuk pembiayaan pendidikan berkembang sesuai dengan hasil investasi.','i'),(5,'Mitra Melati','Merupakan program asuransi yang menawarkan perolehan manfaat pasti dalam bentuk proteksi dan tabungan sekaligus memberikan jaminan hasil investasi yang berkesinambungan dari waktu ke waktu.','i'),(6,'Mitra Oetama','Program asuransi yang menyiapkan dana ketika anda menjalani rawat inap di rumah sakit dan sekaligus memberikan kesempatan memperoleh hasil investasi yang kompetitif dari pengembangan dana premi asuransi yang anda bayar.','i'),(7,'Mitra Pelangi','Merupakan program asuransi yang menawarkan dua manfaat utama, proteksi dan tabungan, satu manfaat bonus dan empat manfaat tambahan yang bisa diadaptasi sesuai kebutuhan anda.','i'),(8,'Mitra Permata','Dirancang untuk memberikan perlindungan manfaat tabungan (permata) dengan nilai investasi. Program ini menawarkan fleksibilitas dalam membayar premi, memilih besar uang pertanggungan asuransi dan mengambil nilai tabungan.','i'),(9,'Mitra Poesaka','Program asuransi yang menawarkan perlindungan dan tabungan masa depan dengan fleksibilitas dalam hal pembayaran premi, penarikan nilai dengan program investasi.','i'),(10,'Mitra Prima','Merupakan program asuransi dwiguna murni dengan manfaat optimal, karena selain tabungan dan santunan pasti ketika tertanggung hidup atau meninggal, program ini juga memberikan akumulasi dengan program investasi','i'),(11,'Mitra Sehat','Program asuransi yang menyiapkan dana ketika anda menjalani rawat inap di rumah sakit, sekaligus member kesempatan memperoleh hasil investasi yang kompetitif dari pengembangan dana premi asuransi yang anda bayar.','i'),(12,'Mitra Sejati','Dirancang untuk memenuhi anda yang paling mendasar dari sebuah program asuransi untuk mendapatkan proteksi jika sewaktu-waktu anda tidak lagi sanggup untuk menhasilkan nilai ekonomi','i'),(13,'BP Smart','Asuransi yang memberikan perlindungan sekaligus investasi anda dimasa depan dengan nilai premi yang sangat terjangkau.','i'),(14,'Kredit','Dirancang untuk memberikan perlindungan bagi para debitur suatu lembaga keuangan, terdiri atas asuransi kredit ekawaktu, kredit cicilan/tahunan dan kredit anuitas','k'),(15,'Eka waktu','Merupakan perlindungan asuransi murni (non tabungan)untuk jangka waktu tertentu.','k'),(16,'Kecelakaan','Merupakan program perlindungan asuransi yang memberikan benefit atau manfaat kepada peserta jika terjadi risiko kecelakaan dalam masa asuransi','k'),(17,'Rawat Inap dan Pembedahan','Dirancang untuk memberikan perlindungan bagi peserta yang menjalani rawat inap dan pembedahan dalam bentuk penggantian biaya perawatan dan pembedahan','k'),(18,'Program Kesejahteraan karyawan','Dirancang untuk memberikan perlindungan asuransi bagi peserta/karyawan pada usia tertentu yang mengalami cacat/fungsinya atau untuk peserta/karyawan yang meninggal dunia.','k'),(19,'Idaman','\"Iuran Dana Mantap\". Merupakan program asuransi dengan\r\n unsure tabungan. Dalam program ini, jika resiko meninggal dunia dibayar sebesar uang pertanggungan yang disepakati, dan jika berhenti dari kepesertaan asuransi dibayar nilai tunai.','k'),(20,'Asri','\"Asuransi rakyat Indonesia\". Dirancang untuk memberikan perlindungan asuransi bagi keluarga Indonesia yang menjadi peserta, tanpa kecuali, termasuk rakyat kecil dengan benefit dalam bentuk santunan kecelakaan cacat atau meninggal dunia Agen blok dalam menjual produk perusahaan telah tersebar sampai ke beberapa daerah sekitar Kec. Wlingi. Setiap agen blok memiliki supervisor yang mengawasinya.','k');
+INSERT INTO `produk` VALUES (1,1,'Eka waktu Ideal (rupiah)','Asuransi yang dirancang untuk membantu keluarga indonesia mempersiapkan dana tabungan hari tua sekaligus untuk mempersiapkan perlindungan ekonomi bagi ahli waris jika anda sebagai tertanggung meninggal dunia.','i'),(2,1,'Mitra Abadi','Program asuransi yang dirancang untuk memberikan perlindungan seumur hidup bagi anda.','i'),(3,1,'Mitra Beasiswa','Asuransi ini dirancang untuk memberikan perlindungan dan pembiayaan pendidikan buah hati anda dibangku Taman kanak-kanak hingga perguruan tinggi, baik orang tua hidup atau meninggal.','i'),(4,1,'Mitra Cerdas','Merupakan program asuransi pendidikan yang dikaitkan dengan program investasi, sehingga dana yang disiapkan untuk pembiayaan pendidikan berkembang sesuai dengan hasil investasi.','i'),(5,1,'Mitra Melati','Merupakan program asuransi yang menawarkan perolehan manfaat pasti dalam bentuk proteksi dan tabungan sekaligus memberikan jaminan hasil investasi yang berkesinambungan dari waktu ke waktu.','i'),(6,1,'Mitra Oetama','Program asuransi yang menyiapkan dana ketika anda menjalani rawat inap di rumah sakit dan sekaligus memberikan kesempatan memperoleh hasil investasi yang kompetitif dari pengembangan dana premi asuransi yang anda bayar.','i'),(7,1,'Mitra Pelangi','Merupakan program asuransi yang menawarkan dua manfaat utama, proteksi dan tabungan, satu manfaat bonus dan empat manfaat tambahan yang bisa diadaptasi sesuai kebutuhan anda.','i'),(8,1,'Mitra Permata','Dirancang untuk memberikan perlindungan manfaat tabungan (permata) dengan nilai investasi. Program ini menawarkan fleksibilitas dalam membayar premi, memilih besar uang pertanggungan asuransi dan mengambil nilai tabungan.','i'),(9,1,'Mitra Poesaka','Program asuransi yang menawarkan perlindungan dan tabungan masa depan dengan fleksibilitas dalam hal pembayaran premi, penarikan nilai dengan program investasi.','i'),(10,1,'Mitra Prima','Merupakan program asuransi dwiguna murni dengan manfaat optimal, karena selain tabungan dan santunan pasti ketika tertanggung hidup atau meninggal, program ini juga memberikan akumulasi dengan program investasi','i'),(11,1,'Mitra Sehat','Program asuransi yang menyiapkan dana ketika anda menjalani rawat inap di rumah sakit, sekaligus member kesempatan memperoleh hasil investasi yang kompetitif dari pengembangan dana premi asuransi yang anda bayar.','i'),(12,1,'Mitra Sejati','Dirancang untuk memenuhi anda yang paling mendasar dari sebuah program asuransi untuk mendapatkan proteksi jika sewaktu-waktu anda tidak lagi sanggup untuk menhasilkan nilai ekonomi','i'),(13,1,'BP Smart','Asuransi yang memberikan perlindungan sekaligus investasi anda dimasa depan dengan nilai premi yang sangat terjangkau.','i'),(14,1,'Kredit','Dirancang untuk memberikan perlindungan bagi para debitur suatu lembaga keuangan, terdiri atas asuransi kredit ekawaktu, kredit cicilan/tahunan dan kredit anuitas','k'),(15,1,'Eka waktu','Merupakan perlindungan asuransi murni (non tabungan)untuk jangka waktu tertentu.','k'),(16,1,'Kecelakaan','Merupakan program perlindungan asuransi yang memberikan benefit atau manfaat kepada peserta jika terjadi risiko kecelakaan dalam masa asuransi','k'),(17,1,'Rawat Inap dan Pembedahan','Dirancang untuk memberikan perlindungan bagi peserta yang menjalani rawat inap dan pembedahan dalam bentuk penggantian biaya perawatan dan pembedahan','k'),(18,1,'Program Kesejahteraan karyawan','Dirancang untuk memberikan perlindungan asuransi bagi peserta/karyawan pada usia tertentu yang mengalami cacat/fungsinya atau untuk peserta/karyawan yang meninggal dunia.','k'),(19,1,'Idaman','\"Iuran Dana Mantap\". Merupakan program asuransi dengan\r\n unsure tabungan. Dalam program ini, jika resiko meninggal dunia dibayar sebesar uang pertanggungan yang disepakati, dan jika berhenti dari kepesertaan asuransi dibayar nilai tunai.','k'),(20,1,'Asri','\"Asuransi rakyat Indonesia\". Dirancang untuk memberikan perlindungan asuransi bagi keluarga Indonesia yang menjadi peserta, tanpa kecuali, termasuk rakyat kecil dengan benefit dalam bentuk santunan kecelakaan cacat atau meninggal dunia Agen blok dalam menjual produk perusahaan telah tersebar sampai ke beberapa daerah sekitar Kec. Wlingi. Setiap agen blok memiliki supervisor yang mengawasinya.','k');
 /*!40000 ALTER TABLE `produk` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -114,11 +121,14 @@ COMMIT;
 CREATE TABLE `tanya_jawab` (
   `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
+  `id_user_konsumen` int(11) NOT NULL,
   `tanggal` date NOT NULL,
   `pertanyaan` text NOT NULL,
-  `jawaban` text NOT NULL,
+  `jawaban` text,
   KEY `id_user` (`id_user`),
-  CONSTRAINT `tanya_jawab_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`)
+  KEY `id_user_konsumen` (`id_user_konsumen`),
+  CONSTRAINT `tanya_jawab_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`),
+  CONSTRAINT `tanya_jawab_ibfk_2` FOREIGN KEY (`id_user_konsumen`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -177,4 +187,4 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on: Wed, 26 Jun 2019 08:36:42 +0200
+-- Dump completed on: Thu, 27 Jun 2019 06:46:34 +0200

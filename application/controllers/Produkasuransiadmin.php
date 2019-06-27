@@ -43,6 +43,8 @@ class Produkasuransiadmin extends CI_Controller {
 			redirect(base_url('produkasuransiadmin/tambah'));
 		}
 
+		$requestData['id_user'] = $this->session->userID;
+
 		Produk_model::insert($requestData);
 		
 		$this->session->set_flashdata(
@@ -82,7 +84,8 @@ class Produkasuransiadmin extends CI_Controller {
 			
 			redirect(base_url('produkasuransiadmin/ubah/' . $id));
 		}
-
+		
+		$requestData['id_user'] = $this->session->userID;
 		Produk_model::where('id', $id)->update($requestData);
 		
 		$this->session->set_flashdata(
